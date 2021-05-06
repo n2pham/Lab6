@@ -73,9 +73,9 @@ class JournalEntry extends HTMLElement {
      */
     
     // CODE GOES HERE
-    this.shadowRoot.querySelector(".entry-title").textContent = entry.title;
-    this.shadowRoot.querySelector(".entry-content").textContent = entry.content;
-    this.shadowRoot.querySelector(".entry-date").textContent = entry.date;
+    this.shadowRoot.querySelector(".entry-title").innerHTML = entry.title;
+    this.shadowRoot.querySelector(".entry-content").innerHTML = entry.content;
+    this.shadowRoot.querySelector(".entry-date").innerHTML = entry.date;
 
     if (entry.image) {
       let entryImage;
@@ -87,9 +87,9 @@ class JournalEntry extends HTMLElement {
        */
       entryImage = document.createElement("img");
       entryImage.className = "entry-image";
-      entryImage.src = entry.image.scr;
+      entryImage.src = entry.image.src;
       entryImage.alt = entry.image.alt;
-      this.shadowRoot.querySelector(".query").appendChild(entryImage);
+      this.shadowRoot.querySelector(".entry").appendChild(entryImage);
 
       /* ------------- do not edit this code, it is for your debugging purposes ------------- */
       try {
