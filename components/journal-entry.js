@@ -85,7 +85,7 @@ class JournalEntry extends HTMLElement {
        * 2. set the image src and alt attributes
        * 3. append the image element to the appropriate location in this component
        */
-      entryImage = document.createElement("image");
+      entryImage = document.createElement("img");
       entryImage.className = "entry-image";
       entryImage.src = entry.image.scr;
       entryImage.alt = entry.image.alt;

@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // CODE GOES HERE vvv
         newPost = document.createElement("journal-entry");
         var main = document.querySelector("main");
-        main.appendChild(newPost)
+        newPost.entry = entry;
+        main.appendChild(newPost);
 
 
 
